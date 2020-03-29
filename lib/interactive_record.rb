@@ -23,12 +23,12 @@ class InteractiveRecord
     column_names
   end
   
-  
-  
   def initialize(info = {})
     info.each do |property, value|
       self.send("#{property}=", value)
     end
   end
+  
+  
   
 end
