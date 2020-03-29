@@ -82,7 +82,7 @@ class InteractiveRecord
     SQL
     
     DB[:conn].execute(sql).flatten
-    puts "#{sql}"
+    sql
     
     
   end 
