@@ -33,4 +33,19 @@ class InteractiveRecord
     self.class.to_s.downcase.pluralize
   end
   
+  def col_names_for_insert 
+    DB[:conn].results_as_hash = true
+    
+    sql = <<-SQL 
+    PRAGMA table_info(#{table_name_for_insert})
+    SQL
+    
+    table_info = DB[:conn].execute(sql)
+    column_names = []
+    
+    table_info.each do |column|
+      column_names << column["name"]
+    end 
+    column_names
+  
 end
