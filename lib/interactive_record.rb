@@ -25,10 +25,10 @@ class InteractiveRecord
   
   
   
-  # def initialize(info = {})
-  #   info.each do |property, value|
-  #     self.send("#{property}=", value)
-  #   end
-  # end
+  def initialize(info = {})
+    info.each do |property, value|
+      self.send("#{property}=", value)
+    end
+  end
   
 end
