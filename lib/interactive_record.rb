@@ -81,7 +81,8 @@ class InteractiveRecord
     SELECT * FROM #{table_name} WHERE #{info.keys[0].to_s} = #{info.values[0].to_s} 
     SQL
     
-    info
+    
+    info.values[0].to_s
     
     
   end 
