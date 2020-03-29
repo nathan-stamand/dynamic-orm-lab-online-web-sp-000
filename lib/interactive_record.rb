@@ -43,7 +43,7 @@ class InteractiveRecord
     table_info = DB[:conn].execute(sql)
     column_names = []
     
-    table_info.each do |column|
+    table_info_for_insert.each do |column|
       column_names << column["name"]
     end 
     column_names
