@@ -82,7 +82,7 @@ class InteractiveRecord
     SQL
     
     
-    info.values[0].to_s
+    info.keys[0].to_s
     
     
   end 
