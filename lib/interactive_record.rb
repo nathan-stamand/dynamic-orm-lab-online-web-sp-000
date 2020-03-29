@@ -83,6 +83,7 @@ class InteractiveRecord
     return_info = []
     DB[:conn].execute(sql).each do |data_pt|
       return_info << data_pt
+    end
     
   end 
   
