@@ -50,7 +50,8 @@ class InteractiveRecord
   end
   
   def values_for_insert 
-    
+    values = [] 
+    col_names_for_insert
   end
   
 end
