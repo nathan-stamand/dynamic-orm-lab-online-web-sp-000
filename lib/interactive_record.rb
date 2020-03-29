@@ -81,6 +81,8 @@ class InteractiveRecord
     SELECT * FROM #{table_name} WHERE #{info.keys[0]} = #{info.values[0]} 
     SQL
     
+    DB[:conn].execute(sql)
+    
   end 
   
 end
