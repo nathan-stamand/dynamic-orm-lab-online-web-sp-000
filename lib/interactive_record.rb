@@ -80,7 +80,7 @@ class InteractiveRecord
     sql = <<-SQL 
     SELECT * FROM #{table_name} WHERE #{info.keys[0].to_s} = #{info.values[0].to_s} 
     SQL
-    return_info = {}
+    return_info = []
     DB[:conn].execute(sql).each do |data_pt|
       return_info << data_pt
     
