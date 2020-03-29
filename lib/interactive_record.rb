@@ -83,7 +83,7 @@ class InteractiveRecord
     
     DB[:conn].execute(sql)
     info.flatten
-    end
+    
     
   end 
   
