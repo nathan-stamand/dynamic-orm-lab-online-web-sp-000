@@ -76,12 +76,12 @@ class InteractiveRecord
   
   def self.find_by(info = {})
     DB[:conn].results_as_hash = true
-    
+    binding.pry
     sql = <<-SQL 
     SELECT * FROM #{table_name} WHERE #{info.keys[0]} = #{info.values[0]} 
     SQL
     
-    binding.pry
+    
     DB[:conn].execute(sql)
     
     
