@@ -31,5 +31,6 @@ class InteractiveRecord
   
   def table_name_for_insert 
     self.class.to_s.downcase.pluralize
+  end
   
 end
