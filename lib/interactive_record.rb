@@ -78,7 +78,7 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true
     
     sql = <<-SQL 
-    SELECT * FROM #{table_name} WHERE #{info.keys} = #{info.values[0]} 
+    SELECT * FROM #{table_name} WHERE #{info.keys.to_s} = #{info.values[0]} 
     SQL
     
     DB[:conn].execute(sql)
